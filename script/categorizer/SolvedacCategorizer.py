@@ -9,14 +9,16 @@ class SolvedacCategorizer:
     def categorize(self):
         with self.dbConnection.cursor() as cursor:
             delete_query = """
-                DELETE FROM problem_category
-                WHERE problem_id IN (
-                    SELECT p.id
-                    FROM problem p
-                        INNER JOIN problem_category pc ON p.id = pc.problem_id
-                    WHERE p.platform_id = 1
-                )
-            """
+                            DELETE FROM problem_category
+                            WHERE problem_id IN (
+                                SELECT * FROM (
+                                    SELECT p.id
+                                    FROM problem p
+                                        INNER JOIN problem_category pc ON p.id = pc.problem_id
+                                    WHERE p.platform_id = 1
+                                ) AS subquery
+                            )
+                        """
             cursor.execute(delete_query)
             self.dbConnection.commit()
             print("All deleted.")
