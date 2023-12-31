@@ -1,4 +1,5 @@
 from script.categorizer.CodeforcesCategorizer import CodeforcesCategorizer
+from script.categorizer.ProgrammersCategorizer import ProgrammersCategorizer
 from script.categorizer.SolvedacCategorizer import SolvedacCategorizer
 from script.difficultyconverter.SolvedacDifficultyConverter import SolvedacDifficultyConverter
 
@@ -6,7 +7,8 @@ from script.difficultyconverter.SolvedacDifficultyConverter import SolvedacDiffi
 def main():
     # SolvedacDifficultyConverter().convert()
     # SolvedacCategorizer().categorize()
-    CodeforcesCategorizer().categorize()
+    # CodeforcesCategorizer().categorize()
+    ProgrammersCategorizer().categorize()
 
 if __name__ == '__main__':
     main()
