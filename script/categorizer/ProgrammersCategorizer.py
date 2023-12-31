@@ -52,7 +52,7 @@ class ProgrammersCategorizer:
         rows = cursor.fetchall()
 
         cnt = 0
-        self.set_gpt_api("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")
+        self.set_gpt_api("")
 
         for row in rows:
             category = self.request_gpt(row[1])
