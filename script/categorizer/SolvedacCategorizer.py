@@ -1,6 +1,5 @@
 from config.DatabaseConfig import DatabaseConfig
 
-
 class SolvedacCategorizer:
 
     def __init__(self):

@@ -1,6 +1,5 @@
 from config.DatabaseConfig import DatabaseConfig
 
-
 class CodeforcesCategorizer:
 
     def __init__(self):
