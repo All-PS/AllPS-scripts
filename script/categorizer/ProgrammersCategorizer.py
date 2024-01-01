@@ -2,7 +2,7 @@ from config.DatabaseConfig import DatabaseConfig
 from openai import OpenAI
 import re
 
-client = OpenAI(api_key="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")
+client = OpenAI(api_key="")
 
 class ProgrammersCategorizer:
 
